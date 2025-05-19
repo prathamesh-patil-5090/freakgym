@@ -150,7 +150,7 @@ export default function BackgroundEffects() {
               <span 
                 key={bubble.key}
                 className="rising-bubble"
-                style={bubble.style}
+                style={bubble.style as React.CSSProperties}
               />
             ))}
             
@@ -159,7 +159,7 @@ export default function BackgroundEffects() {
               <span 
                 key={bubble.key}
                 className="rising-bubble"
-                style={bubble.style}
+                style={bubble.style as React.CSSProperties}
               />
             ))}
             
@@ -168,7 +168,7 @@ export default function BackgroundEffects() {
               <span 
                 key={bubble.key}
                 className="rising-bubble"
-                style={bubble.style}
+                style={bubble.style as React.CSSProperties}
               />
             ))}
           </>
