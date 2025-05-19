@@ -29,24 +29,9 @@ ChartJS.register(
 const ProgressTracking = () => {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    
-    // Check if we're on mobile viewport
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // Standard md breakpoint
-    };
-    
-    // Initial check
-    checkMobile();
-    
-    // Add resize listener
-    window.addEventListener('resize', checkMobile);
-    
-    // Cleanup
-    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   // Dummy data

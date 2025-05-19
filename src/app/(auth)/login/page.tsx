@@ -90,7 +90,7 @@ function LoginForm() {
         <div className="mt-8 text-center">
           {/* Add transition to text and link colors */}
           <p className="text-[var(--text-secondary)] text-sm md:text-base transition-colors duration-300 ease-in-out">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/register" className="text-[var(--accent-color)] hover:text-[var(--accent-hover)] font-medium hover:underline transition-all duration-300 ease-in-out">
               Register
             </Link>

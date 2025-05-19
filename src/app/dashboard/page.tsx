@@ -1,6 +1,4 @@
 import React from 'react';
-import Image from 'next/image'; // Import Image component if using Next/Image for profile pic
-import Link from 'next/link'; // Import Link if progress tracking links somewhere
 import WorkoutSummary from '../../components/WorkoutSummary';
 import ProgressTracking from '@/components/ProgressTracking';
 import ProfileCard from '@/components/ProfileCard';
