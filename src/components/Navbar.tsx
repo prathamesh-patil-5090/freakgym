@@ -30,10 +30,15 @@ const Navbar = () => {
                <Link href="/dashboard" className="text-[var(--text-secondary)] hover:text-[var(--accent-color)] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ease-in-out">
                  Dashboard
                </Link>
+               <Link href="/grind" className="text-[var(--text-secondary)] hover:text-[var(--accent-color)] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ease-in-out">
+                 Grind
+               </Link>
+               <Link href="/hustle" className="text-[var(--text-secondary)] hover:text-[var(--accent-color)] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ease-in-out">
+                 Hustle
+               </Link>
                <Link href="/profile" className="text-[var(--text-secondary)] hover:text-[var(--accent-color)] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ease-in-out">
                  Profile
                </Link>
-               {/* Add more links as needed */}
              </div>
              {/* Theme Toggle Button */}
              <div className="ml-4 flex items-center md:ml-6">
@@ -81,6 +86,20 @@ const Navbar = () => {
             className="text-[var(--text-secondary)] hover:text-[var(--accent-color)] block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ease-in-out"
           >
             Dashboard
+          </Link>
+          <Link 
+            href="/grind"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-[var(--text-secondary)] hover:text-[var(--accent-color)] block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ease-in-out"
+          >
+            Grind
+          </Link>
+          <Link 
+            href="/hustle"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-[var(--text-secondary)] hover:text-[var(--accent-color)] block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ease-in-out"
+          >
+            Hustle
           </Link>
           <Link 
             href="/profile"

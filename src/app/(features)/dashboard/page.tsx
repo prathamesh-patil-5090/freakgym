@@ -1,7 +1,10 @@
 import React from 'react';
-import WorkoutSummary from '../../components/WorkoutSummary';
+import WorkoutSummary from '../../../components/WorkoutSummary';
 import ProgressTracking from '@/components/ProgressTracking';
 import ProfileCard from '@/components/ProfileCard';
+import UpcomingSchedule from '@/components/UpcomingSchedule';
+import TipOfTheDay from '@/components/TipOfTheDay';
+import PersonalBestHighlights from '@/components/PersonalBestHighlights';
 
 const DashboardPage = () => {
   return (
@@ -15,18 +18,18 @@ const DashboardPage = () => {
           {/* Workout Summary Card */}
           <WorkoutSummary />
 
-          {/* Example Card 2 */}
+          {/* Progress Tracking Card */}
           <ProgressTracking />
 
-          {/* Example Card 3 */}
-          <div className="p-6 rounded-lg card-background">
-            <h2 className="text-xl font-semibold mb-4 theme-text-primary">
-              Upcoming Schedule
-            </h2>
-            <p className="theme-text-secondary">
-              Placeholder for scheduled workouts or events.
-            </p>
-            {/* Add calendar or list here */}
+          {/* Tip of the Day Card */}
+          <TipOfTheDay />
+
+          {/* Personal Best Highlights Card */}
+          <PersonalBestHighlights />
+
+          {/* Upcoming Schedule Card - Spans 2 columns on larger screens */}
+          <div className="lg:col-span-2">
+            <UpcomingSchedule />
           </div>
 
           {/* Add more cards as needed */}

@@ -124,7 +124,10 @@ const ProgressTracking = () => {
           display: false, // Hide vertical grid lines
         },
         ticks: {
-          color: 'var(--text-secondary)',
+          color: theme === 'dark' ? '#00FFFF' : '#4CAF50', // Theme-aware colors for x-axis dates
+          font: {
+            weight: theme === 'dark' ? '600' : '500', // Slightly bolder in dark mode
+          },
         },
         border: {
           display: false

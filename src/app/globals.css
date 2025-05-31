@@ -550,6 +550,7 @@ input {
 /* Custom Scrollbar */
 .scrollbar-thin::-webkit-scrollbar {
   width: 6px;
+  height: 0px; /* Hide horizontal scrollbar */
 }
 
 .scrollbar-thin::-webkit-scrollbar-track {
@@ -566,6 +567,38 @@ input {
   opacity: 0.8;
 }
 
+/* Hide horizontal scrollbar for all elements */
+.scrollbar-thin::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+/* Firefox scrollbar hiding */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) transparent;
+}
+
+/* Hide horizontal scrollbar in Firefox */
+.scrollbar-thin {
+  overflow-x: hidden;
+}
+
+/* Global horizontal scrollbar hiding */
+*::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+/* Ensure no horizontal overflow on body and html */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for specific containers that might have horizontal scroll */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 0px;
+  display: none;
+}
+
 /* Profile Card animations */
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0); }
@@ -580,4 +613,30 @@ input {
 @keyframes spin-slow {
   0% { transform: rotate(0deg);}
   100% { transform: rotate(360deg);}
+}
+
+html,
+body {
+  height: 100%; /* Or min-height: 100%; */
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  /* Ensure body can scroll if content overflows */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Important for some fixed/absolute children layouts */
+}
+
+/* If you have a #__next div or similar root element from older Next.js versions, ensure it's also flexible */
+/* For app router, the direct children of body in layout.tsx are more relevant */
+main {
+  flex-grow: 1; /* Allows main content area to expand */
+  overflow-y: auto; /* Allow vertical scrolling within main if needed, or let body handle it */
+}
+
+/* Reset any potential overflow hidden on root elements if applied by other global styles */
+html:has(body) {
+  overflow-y: auto; /* Or visible, depending on desired scroll behavior */
 }
